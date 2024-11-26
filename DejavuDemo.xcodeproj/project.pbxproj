@@ -14,6 +14,9 @@
 		C04E8A7B2CF6483F0074E407 /* DejavuDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A7A2CF6483F0074E407 /* DejavuDemoTests.swift */; };
 		C04E8A852CF6483F0074E407 /* DejavuDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A842CF6483F0074E407 /* DejavuDemoUITests.swift */; };
 		C04E8A872CF6483F0074E407 /* DejavuDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A862CF6483F0074E407 /* DejavuDemoUITestsLaunchTests.swift */; };
+		C04E8A952CF648760074E407 /* Dejavu in Frameworks */ = {isa = PBXBuildFile; productRef = C04E8A942CF648760074E407 /* Dejavu */; };
+		C04E8A982CF649BC0074E407 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A972CF649BC0074E407 /* NetworkManager.swift */; };
+		C04E8A992CF649BC0074E407 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A972CF649BC0074E407 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		C04E8A802CF6483F0074E407 /* DejavuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DejavuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04E8A842CF6483F0074E407 /* DejavuDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DejavuDemoUITests.swift; sourceTree = "<group>"; };
 		C04E8A862CF6483F0074E407 /* DejavuDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DejavuDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C04E8A962CF6497A0074E407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C04E8A972CF649BC0074E407 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04E8A952CF648760074E407 /* Dejavu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +100,12 @@
 		C04E8A682CF6483E0074E407 /* DejavuDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C04E8A962CF6497A0074E407 /* Info.plist */,
 				C04E8A692CF6483E0074E407 /* DejavuDemoApp.swift */,
 				C04E8A6B2CF6483E0074E407 /* ContentView.swift */,
 				C04E8A6D2CF6483F0074E407 /* Assets.xcassets */,
 				C04E8A6F2CF6483F0074E407 /* Preview Content */,
+				C04E8A972CF649BC0074E407 /* NetworkManager.swift */,
 			);
 			path = DejavuDemo;
 			sourceTree = "<group>";
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = DejavuDemo;
+			packageProductDependencies = (
+				C04E8A942CF648760074E407 /* Dejavu */,
+			);
 			productName = DejavuDemo;
 			productReference = C04E8A662CF6483E0074E407 /* DejavuDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = C04E8A5D2CF6483E0074E407;
+			packageReferences = (
+				C04E8A932CF648760074E407 /* XCRemoteSwiftPackageReference "dejavu" */,
+			);
 			productRefGroup = C04E8A672CF6483E0074E407 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04E8A982CF649BC0074E407 /* NetworkManager.swift in Sources */,
 				C04E8A6C2CF6483E0074E407 /* ContentView.swift in Sources */,
 				C04E8A6A2CF6483E0074E407 /* DejavuDemoApp.swift in Sources */,
 			);
@@ -266,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04E8A992CF649BC0074E407 /* NetworkManager.swift in Sources */,
 				C04E8A7B2CF6483F0074E407 /* DejavuDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +441,7 @@
 				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DejavuDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +471,7 @@
 				DEVELOPMENT_TEAM = P8HGHS7JQ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DejavuDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C04E8A932CF648760074E407 /* XCRemoteSwiftPackageReference "dejavu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Esri/dejavu";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C04E8A942CF648760074E407 /* Dejavu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C04E8A932CF648760074E407 /* XCRemoteSwiftPackageReference "dejavu" */;
+			productName = Dejavu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C04E8A5E2CF6483E0074E407 /* Project object */;
 }
