@@ -13,6 +13,7 @@ final class DejavuDemoTests: XCTestCase {
     var session: URLSession!
 
     override func setUpWithError() throws {
+        // Register Dejavu's URL protocol to intercept network requests.
         Dejavu.setURLProtocolRegistrationHandler { [weak self] protocolClass in
             guard let self = self else { return }
             let config = URLSessionConfiguration.default
@@ -20,37 +21,39 @@ final class DejavuDemoTests: XCTestCase {
             self.session = URLSession(configuration: config)
         }
         
+        // Unregister Dejavu's URL protocol after tests.
         Dejavu.setURLProtocolUnregistrationHandler { [weak self] protocolClass in
             self?.session = URLSession(configuration: .default)
         }
         
+        // Configure Dejavu with the path to store recorded data and the mode.
         let configuration = DejavuConfiguration(
             fileURL: .testDataDirectory.appendingPathComponent("mockData"),
             mode: .cleanRecord
         )
         
+        // Start Dejavu session with the specified configuration.
         Dejavu.startSession(configuration: configuration)
     }
     
     override func tearDown() {
+        // End Dejavu session after tests.
         Dejavu.endSession()
         session = nil
     }
     
     func testFetchData() async throws {
-        let expectation = self.expectation(description: "Fetching data")
+        // Define the URL for the network request.
+        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
         
-        NetworkManager.shared.fetchData { result in
-            switch result {
-            case .success(let users):
-                XCTAssertFalse(users.isEmpty, "Users should not be empty")
-            case .failure(let error):
-                XCTFail("Error fetching data: \(error)")
-            }
-            expectation.fulfill()
-        }
+        // Perform the network request using the configured session.
+        let (data, _) = try await session.data(from: url)
         
-        await fulfillment(of: [expectation], timeout: 5)
+        // Decode the received data into an array of User objects.
+        let users = try JSONDecoder().decode([User].self, from: data)
+        
+        // Assert that the users array is not empty.
+        XCTAssertFalse(users.isEmpty, "Users should not be empty")
     }
 }
 
