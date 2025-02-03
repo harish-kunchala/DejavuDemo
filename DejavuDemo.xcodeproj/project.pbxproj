@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C048FF2F2D4AF4DD00BA3825 /* Dejavu in Frameworks */ = {isa = PBXBuildFile; productRef = C048FF2E2D4AF4DD00BA3825 /* Dejavu */; };
 		C04E8A6A2CF6483E0074E407 /* DejavuDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A692CF6483E0074E407 /* DejavuDemoApp.swift */; };
 		C04E8A6C2CF6483E0074E407 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04E8A6B2CF6483E0074E407 /* ContentView.swift */; };
 		C04E8A6E2CF6483F0074E407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04E8A6D2CF6483F0074E407 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C048FF2F2D4AF4DD00BA3825 /* Dejavu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C048FF2D2D4AF4DD00BA3825 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C04E8A5D2CF6483E0074E407 = {
 			isa = PBXGroup;
 			children = (
 				C04E8A682CF6483E0074E407 /* DejavuDemo */,
 				C04E8A792CF6483F0074E407 /* DejavuDemoTests */,
 				C04E8A832CF6483F0074E407 /* DejavuDemoUITests */,
+				C048FF2D2D4AF4DD00BA3825 /* Frameworks */,
 				C04E8A672CF6483E0074E407 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -619,6 +629,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C048FF2E2D4AF4DD00BA3825 /* Dejavu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C04E8A932CF648760074E407 /* XCRemoteSwiftPackageReference "dejavu" */;
+			productName = Dejavu;
+		};
 		C04E8A942CF648760074E407 /* Dejavu */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C04E8A932CF648760074E407 /* XCRemoteSwiftPackageReference "dejavu" */;
