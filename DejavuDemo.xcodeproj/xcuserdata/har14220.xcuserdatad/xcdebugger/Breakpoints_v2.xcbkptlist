@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D6C828BE-DE9A-4977-A253-895E0EDCDF3B"
+            uuid = "9CB0B672-1946-486E-8F05-873A2337932A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DejavuDemoTests/DejavuDemoTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "setUpWithError()"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "testFetchDataSuccessfullyReturnsUsers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
